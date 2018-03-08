@@ -58,13 +58,30 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         return 115
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objs = controller.fetchedObjects, objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "itemDetailsVCNew", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemDetailsVCNew" {
+            if let destination = segue.destination as? itemDetailsVC {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
         fetchRequest.sortDescriptors = [dateSort]
         
         let controller =  NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
+        controller.delegate = self
         self.controller = controller
         
         do{
@@ -122,22 +139,22 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     func generateTestData() {
         
-        let item = Item(context: context)
-        item.title = "MacBook Pro"
-        item.price = 1800
-        item.details = "I can't wait until the September event, I hope they release new MPBs"
-        
-        let item2 = Item(context: context)
-        item2.title = "Bose Headphones"
-        item2.price = 300
-        item2.details = "But man, its so nice to be able to blaock out everyone with the noise canceling tech."
-        
-        let item3 = Item(context: context)
-        item3.title = "Tesla Model S"
-        item3.price = 110000
-        item3.details = "Oh man this is a beautiful car. And one day, I willl own it"
-        
-        ad.saveContext()
+//        let item = Item(context: context)
+//        item.title = "MacBook Pro"
+//        item.price = 1800
+//        item.details = "I can't wait until the September event, I hope they release new MPBs"
+//        
+//        let item2 = Item(context: context)
+//        item2.title = "Bose Headphones"
+//        item2.price = 300
+//        item2.details = "But man, its so nice to be able to blaock out everyone with the noise canceling tech."
+//        
+//        let item3 = Item(context: context)
+//        item3.title = "Tesla Model S"
+//        item3.price = 110000
+//        item3.details = "Oh man this is a beautiful car. And one day, I willl own it"
+//        
+//        ad.saveContext()
         
     }
 }

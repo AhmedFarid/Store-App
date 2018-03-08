@@ -154,7 +154,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <prototypes>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="115" id="RJL-I9-iod" customClass="itemCell" customModule="Store_App" customModuleProvider="target">
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="115" id="RJL-I9-iod" customClass="itemCell" customModule="Store_App" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="28" width="288" height="115"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RJL-I9-iod" id="JPu-Qj-ckt">
@@ -224,9 +224,6 @@
                                 </constraints>
                             </tableViewCellContentView>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <outlet property="details" destination="fwx-pY-GRA" id="97r-fJ-ADl"/>
                                 <outlet property="price" destination="ZBK-rq-hmT" id="lRF-BG-cQN"/>
@@ -312,6 +309,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.88394273479999996" green="0.88394273479999996" blue="0.88394273479999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButt:" destination="Niy-MS-yU9" eventType="touchUpInside" id="yBr-Ja-sTa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-J5-zHc">
                                 <rect key="frame" x="113" y="290" width="94" height="21"/>
