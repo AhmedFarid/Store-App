@@ -14,7 +14,7 @@ class itemCell: UITableViewCell {
         titleLable.text = item.title
         price.text = "$\(item.price)"
         details.text = item.details
-        
+        prodectImage.image = item.toImage?.image as? UIImage
     }
     
 }
