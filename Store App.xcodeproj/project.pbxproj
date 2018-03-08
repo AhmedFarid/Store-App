@@ -22,6 +22,9 @@
 		693E45FC204DFEE200682603 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E45F4204DFEE200682603 /* Image+CoreDataClass.swift */; };
 		693E45FD204DFEE200682603 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E45F5204DFEE200682603 /* Image+CoreDataProperties.swift */; };
 		693E4603204E1CF700682603 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E4602204E1CF700682603 /* MaterialView.swift */; };
+		69FA3FAC20502FBF00C26FB0 /* itemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA3FAB20502FBF00C26FB0 /* itemCell.swift */; };
+		69FA3FAE20508A1000C26FB0 /* itemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA3FAD20508A1000C26FB0 /* itemDetailsVC.swift */; };
+		69FA3FB02050C02000C26FB0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FA3FAF2050C02000C26FB0 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		693E45F4204DFEE200682603 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		693E45F5204DFEE200682603 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		693E4602204E1CF700682603 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		69FA3FAB20502FBF00C26FB0 /* itemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemCell.swift; sourceTree = "<group>"; };
+		69FA3FAD20508A1000C26FB0 /* itemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemDetailsVC.swift; sourceTree = "<group>"; };
+		69FA3FAF2050C02000C26FB0 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				693E45DB204DE9F300682603 /* MainVC.swift */,
+				69FA3FAD20508A1000C26FB0 /* itemDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -121,7 +128,9 @@
 		693E4601204E1C9800682603 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69FA3FAF2050C02000C26FB0 /* CustomTextField.swift */,
 				693E4602204E1CF700682603 /* MaterialView.swift */,
+				69FA3FAB20502FBF00C26FB0 /* itemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -199,17 +208,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				693E45E2204DE9F300682603 /* Store_App.xcdatamodeld in Sources */,
+				69FA3FAC20502FBF00C26FB0 /* itemCell.swift in Sources */,
 				693E45F8204DFEE200682603 /* Store+CoreDataClass.swift in Sources */,
 				693E45FB204DFEE200682603 /* ItemType+CoreDataProperties.swift in Sources */,
 				693E4603204E1CF700682603 /* MaterialView.swift in Sources */,
 				693E45DC204DE9F300682603 /* MainVC.swift in Sources */,
 				693E45F6204DFEE200682603 /* Item+CoreDataClass.swift in Sources */,
 				693E45FA204DFEE200682603 /* ItemType+CoreDataClass.swift in Sources */,
+				69FA3FAE20508A1000C26FB0 /* itemDetailsVC.swift in Sources */,
 				693E45F9204DFEE200682603 /* Store+CoreDataProperties.swift in Sources */,
 				693E45DA204DE9F300682603 /* AppDelegate.swift in Sources */,
 				693E45F7204DFEE200682603 /* Item+CoreDataProperties.swift in Sources */,
 				693E45FC204DFEE200682603 /* Image+CoreDataClass.swift in Sources */,
 				693E45FD204DFEE200682603 /* Image+CoreDataProperties.swift in Sources */,
+				69FA3FB02050C02000C26FB0 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +383,7 @@
 				693E45ED204DE9F300682603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
